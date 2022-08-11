@@ -1,18 +1,26 @@
-<form action="{{ route('auth.register') }}" method="post">
-  <label>
-    Username
-    <input type="text" name="username" />
-  </label>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+</head>
+<body>
+  <div class="container-form">
+    <form action="{{ route('auth.register') }}" method="post">
+      <h1 class="head-form">Registro</h1>
+      <input type="text" name="username" placeholder="Nome de usuário" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Senha" />
+      <button type="submit">Registrar</button>
+      <span>ou</span>
+      <a href="{{ route('auth.login') }}">Faça login</a>
+    </form>
+  </div>
+</body>
+</html>
 
-  <label>
-    email
-    <input type="email" name="email" />
-  </label>
 
-  <label>
-    password
-    <input type="password" name="password" />
-  </label>
-
-  <button type="submit">Register<button>
-</form>

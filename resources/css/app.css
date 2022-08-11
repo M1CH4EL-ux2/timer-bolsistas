@@ -16,13 +16,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .container-form form {
   width: 20rem;
   padding: 1rem;
+  border-radius: .4rem;
+  -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.44);
+  box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.44);
   background-color: #eeeeee;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: .5rem;
+}
+
+.container-form form input, button {
+  padding: .5rem;
+  border: none;
+  border-radius: .4rem;
+  border: .1rem solid #a5a5a5;
+}
+
+.container-form form a, .container-form form span {
+  color: #494949;
+}
+
+.container-form .alert {
+  position: absolute;
+  color: #e24a4a;
+  top: 3rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: .4rem;
+  background-color: #eeeeee;
+  text-align: center;
+  font-weight: 500;
 }
