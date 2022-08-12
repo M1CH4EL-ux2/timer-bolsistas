@@ -8,13 +8,16 @@
   @entryPointScripts('app')
 </head>
 <body>
-  @if (auth.user)
-    <h2>Logado</h2>
-    <a href="{{ route('auth.logout') }}">Logout</a>
-  @endif
-  <main>
-    <div>
-      <h1>Pagina Com os timers</h1>
+  <header>
+    <h1>Olá, seja bem vindo {{ auth.user.username }}</h1>
+  </header>
+  <main class="containerDashboard">
+    <div class="currentTimer">
+      <span class="hour"></span>
+    </div>
+    <div class="timerContainer">
+      <span class="timer">00:00:00</span>
+      <button class="onoff">INICIAR</button>
     </div>
   </main>
 </body>
