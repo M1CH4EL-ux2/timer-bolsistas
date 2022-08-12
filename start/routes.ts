@@ -20,7 +20,11 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ view }) => {
+Route.get('/', async ({ view, auth, response }) => {
+  if (!auth.user) {
+    return response.redirect().toRoute('auth.login.show')
+  }
+
   return view.render('dashboard')
 })
 
